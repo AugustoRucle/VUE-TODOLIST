@@ -1,0 +1,99 @@
+#note{
+    margin: 10px 10px 10px 0px;
+    padding: 2px 2px 2px 2px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 5px;
+    width: 500px;
+}
+
+.container{
+    margin-left: 5px;
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#textAdd{
+    border-color: solid;
+    border-color: black;
+    border-right-width: 2px;
+    margin-right: 5px;
+    width: 80% ;
+}
+
+button{
+    outline: none;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-color: transparent;
+}
+
+.fa-eraser{
+    margin-top: 5px;
+}
+
+.fa-plus-circle, .fa-edit{
+    margin-top: 15px;
+}
+
+.fa-eraser, .fa-plus, .fa-edit{
+    font-size: 15px;
+    cursor: pointer;
+    
+}
+
+.fa-eraser:hover{
+    cursor: pointer;
+    color: #D50000;
+    font-size: 18px;
+}
+
+.fa-edit:hover{
+    cursor: pointer;
+    color: #4A148C;
+    font-size: 18px;
+}
+
+input{
+    outline: none;
+    border-width: 0px;
+    padding: 2px 2px 2px 2px;
+    width: 95%;
+    height: 25px;
+}
+
+#main{
+    display: inline-flex;
+    padding: 0px;
+    margin: 0px;
+}
+
+#text{
+    display: block;
+    margin: 0px;
+    padding: 0px;
+}
+
+#numberNote{
+    border-radius: 2px;
+    background-color: black;
+    width: 40px;
+    height: 25px;
+    color: white; 
+    text-align: center;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-top: 5px;
+}
+
+#title{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
