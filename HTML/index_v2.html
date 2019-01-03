@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo List</title>
+
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="../fontawesome/css/all.css">
+</head>
+
+<body>
+    <div class="container" id="app">
+        <div id="note">
+            <div id="text">
+                <input id="textAdd" v-model="title" placeholder="Ingresa el titulo de la nota">
+                <button class="fas fa-plus" v-on:click="addNote()"> Añadir</button>
+            </div>
+        </div>
+        <div id="note" v-for="(note, index) in notes">
+            <div id="main">
+                <p id="numberNote">{{ index }}</p>
+                <div id="text">
+                    <input id="title" v-model="note.title" onclick="clickInput(this)">
+                    <input id="subTitle" v-model="note.body" placeholder="Agrega una descripcion" onclick="clickInput(this)">
+                </div>
+                <div id="options">
+                    <button class="fas fa-eraser" v-on:click="deleteNote(index, note.id)"> Borrar</button>
+                    <button class="far fa-edit" v-on:click="editNote(index, note.id)"> Editar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../JS/main.js"></script>
+    <script src="../JS/myJS.js"></script>
+</body>
+
+</html>

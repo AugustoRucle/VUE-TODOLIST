@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ToDol List</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../CSS/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/myCss.css">
+</head>
+
+<body>
+    <div id="app">
+        <input v-model="title">
+        <button v-on:click="addNote()">Añadir nota</button>
+        <ol>
+            <li v-for="(note, index) in notes" style="list-style-type: none">
+                <div style="margin-bottom: 20px">
+                    <div>
+                        <input v-model="note.title">
+                        <button v-on:click="deleteNote(index, note.id)">Delete</button>
+                    </div>
+                    <textarea v-model="note.body"></textarea>
+                    <button v-on:click="editNote(index, note.id)">Editar</button>
+                </div>
+            </li>
+        </ol>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../JQUERY/jquery-1.8.3.min.js"></script>
+    <script src="../JQUERY/jquery-ui-1.9.2.custom.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/myJs.js"></script>
+</body>
+
+</html>
